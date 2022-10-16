@@ -17,4 +17,30 @@ body{
     box-shadow: 0 2px 8px thistle;
 }
 
+label, input{
+    margin-bottom: 0.5rem;
+    display: block;
+    width: 100%;
+}
+
+label{
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+li{
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid turquoise;
+}
+#goal {
+    margin: 16px 0px;
+    padding: 16px;
+}
+
 
