@@ -27,5 +27,8 @@ Vue.createApp({
                 this.$refs.input.focus();
             }   
         },
+        handleClickLIItem(event){
+            this.$refs.list.removeChild(event.target);
+        },
     },
 }).mount('#app');
