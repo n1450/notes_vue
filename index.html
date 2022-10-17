@@ -11,12 +11,12 @@
     <div id="app">
     <div>
         <label for="goal">Goal</label>
-        <input  type="text" name="" id="goal" v-model="enteredValue">
+        <input  type="text" name="" id="goal" v-model="enteredValue" @keydown.enter="addGoal" autofocus placeholder="Enter note..." />
         <button v-on:click="addGoal">Add</button>
     </div>
     <ul>
-        <li v-for="goal in goals">{{ goal }}</li>
-
+        <!-- <li v-for="goal in goals">{{ goal }}</li> -->
+        <li v-for="(goal, i) in goals" :key="i" >{{goal}}</li>
     </ul>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

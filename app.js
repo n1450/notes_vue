@@ -1,5 +1,5 @@
 // const buttonEl = document.querySelector('button');
-// const inputEl = document.querySelector('input');
+// const inputEl = document.querySelector('input'); //getEleemntById == querySelector
 // const listEl = document.querySelector('ul');
 
 // function addGoal(){
@@ -13,16 +13,19 @@
 // buttonEl.addEventListener('click',addGoal);
 
 Vue.createApp({
-    data(){
-        return{
+    data() {
+        return {
             goals: [],
-            enteredValue:''
+            enteredValue: ''
         };
     },
-    methods: {
-        addGoal(){
-            this.goals.push(this.enteredValue);
-            this.enteredValue="";
-        }
-    }
+    methods: { 
+        addGoal() { //handleClick()
+            if(this.enteredValue){
+                this.goals.push(this.enteredValue);
+                this.enteredValue = "";
+                this.$refs.input.focus();
+            }   
+        },
+    },
 }).mount('#app');
